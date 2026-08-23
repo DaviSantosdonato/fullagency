@@ -208,7 +208,7 @@ export const marqueeClients: readonly MarqueeClient[] = [
   {
     name: "Show Safra",
     logo: {
-      src: "/media/clients/show-safra.svg",
+      src: "/media/clients/show-safra.png",
       width: 543,
       height: 178,
       kind: "wordmark",
