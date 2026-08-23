@@ -185,10 +185,10 @@ export const CinematicScrollHero = () => {
         className="relative"
         style={{
           // Give the playhead enough runway that one wheel gesture advances
-          // only a small part of the footage. Desktop spans roughly eight
+          // only a small part of the footage. Desktop spans roughly twelve
           // usable screens; phones stay shorter because each screen costs a
           // full swipe, while still giving every chapter room to breathe.
-          height: scrubEnabled ? (narrow ? "700vh" : "900vh") : "auto",
+          height: scrubEnabled ? (narrow ? "900vh" : "1300vh") : "auto",
         }}
       >
         <div
