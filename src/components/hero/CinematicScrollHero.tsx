@@ -52,9 +52,11 @@ export const CinematicScrollHero = () => {
   const stageRef = useRef<HTMLDivElement>(null);
   const { reducedMotion, lowPower, narrow, resolved } = useDeviceProfile();
 
-  // Scrubbing is the enhancement, not the baseline. Reduced motion and weak
-  // hardware get the poster frame and the same copy, laid out to be read.
-  const scrubEnabled = resolved && !reducedMotion && !lowPower;
+  // Phones use a dedicated 640px, densely-keyframed MP4, so they can scrub
+  // reliably even when Safari reports only four logical cores. Keep the
+  // low-power fallback for wider devices, where the larger asset costs more.
+  const scrubEnabled =
+    resolved && !reducedMotion && (narrow || !lowPower);
 
   const { videoRef, state, subscribe } = useScrollVideo({
     scopeRef,
