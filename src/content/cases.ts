@@ -212,7 +212,7 @@ export const marqueeClients: readonly MarqueeClient[] = [
       width: 543,
       height: 178,
       kind: "wordmark",
-      surface: "light",
+      surface: "dark",
     },
     source: "https://www.showsafra.com.br/",
   },
