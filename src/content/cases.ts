@@ -183,6 +183,7 @@ export interface MarqueeClient {
     readonly height: number;
     readonly kind: "wordmark" | "mark";
     readonly surface: "dark" | "light";
+    readonly invertOnDark?: boolean;
   };
   /** Official page from which the exact artwork was obtained. */
   readonly source: string;
@@ -223,7 +224,8 @@ export const marqueeClients: readonly MarqueeClient[] = [
       width: 2313,
       height: 522,
       kind: "wordmark",
-      surface: "light",
+      surface: "dark",
+      invertOnDark: true,
     },
     source: "https://www.simonetto.com.br/",
   },
@@ -256,7 +258,7 @@ export const marqueeClients: readonly MarqueeClient[] = [
       width: 395,
       height: 170,
       kind: "wordmark",
-      surface: "light",
+      surface: "dark",
     },
     source: "https://www.multvale.com/",
   },

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import clsx from "clsx";
 import { BoltMark } from "@/components/ui/BoltMark";
 import { marqueeClients } from "@/content/cases";
 
@@ -28,11 +29,12 @@ const ClientRun = ({ duplicate = false }: { readonly duplicate?: boolean }) => (
             height={client.logo.height}
             loading="eager"
             unoptimized={client.logo.src.endsWith(".svg")}
-            className={
+            className={clsx(
               client.logo.kind === "mark"
                 ? "h-20 w-20 rounded-full object-contain md:h-24 md:w-24"
-                : "max-h-16 w-auto max-w-full object-contain md:max-h-20"
-            }
+                : "max-h-16 w-auto max-w-full object-contain md:max-h-20",
+              client.logo.invertOnDark && "brightness-0 invert",
+            )}
           />
         </div>
       </li>
