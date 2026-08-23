@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import clsx from "clsx";
 import { BoltMark } from "@/components/ui/BoltMark";
+import { HandwrittenAccent } from "@/components/ui/HandwrittenAccent";
 import { marqueeClients } from "@/content/cases";
 
 const ClientRun = ({ duplicate = false }: { readonly duplicate?: boolean }) => (
@@ -56,7 +57,8 @@ export const ClientMarquee = () => (
         id="client-marquee-title"
         className="max-w-[16ch] text-h2 font-light leading-[0.98] tracking-[-0.035em] text-paper-50"
       >
-        Principais marcas atendidas pela FULL
+        Principais marcas atendidas pela{" "}
+        <HandwrittenAccent>FULL</HandwrittenAccent>
       </h2>
       <Link
         href="/cases"
