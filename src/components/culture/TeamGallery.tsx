@@ -8,12 +8,11 @@ import { gsap, useGSAP } from "@/lib/gsap";
 import { team } from "@/content/team";
 
 /**
- * The people, arranged the way a contact sheet is - not the way an org chart is.
+ * The people, arranged as a precise studio contact sheet.
  *
- * Every portrait sits at a slightly different height and the columns drift at
- * slightly different rates on scroll. The irregularity is the point: it reads as
- * a wall of prints someone pinned up, which is closer to how this team actually
- * works than a tidy grid of role cards would be.
+ * Every portrait uses the same 2:3 frame and shares a common baseline. The
+ * staggered entrance keeps the reveal alive without leaving the team crooked
+ * after the animation finishes.
  */
 export const TeamGallery = () => {
   const scope = useRef<HTMLElement>(null);
@@ -37,20 +36,6 @@ export const TeamGallery = () => {
           scrollTrigger: { trigger: root, start: "top 74%", once: true },
         },
       );
-
-      // Alternating drift, small enough to feel like depth rather than motion.
-      cards.forEach((card, index) => {
-        gsap.to(card, {
-          yPercent: index % 2 === 0 ? -5 : 5,
-          ease: "none",
-          scrollTrigger: {
-            trigger: root,
-            start: "top bottom",
-            end: "bottom top",
-            scrub: true,
-          },
-        });
-      });
     },
     { scope },
   );
@@ -81,13 +66,12 @@ export const TeamGallery = () => {
           </Reveal>
         </div>
 
-        <ul className="mt-14 grid grid-cols-2 gap-x-4 gap-y-10 md:mt-20 md:grid-cols-3 md:gap-x-6 lg:grid-cols-4">
-          {team.map((member, index) => (
+        <ul className="mt-14 grid grid-cols-2 items-start gap-x-4 gap-y-10 md:mt-20 md:grid-cols-3 md:gap-x-6 lg:grid-cols-4">
+          {team.map((member) => (
             <li
               key={member.name}
               data-portrait
-              // A staggered baseline, so the row never reads as a table.
-              className={index % 3 === 1 ? "md:mt-10" : index % 3 === 2 ? "md:mt-4" : ""}
+              className="grid w-full grid-rows-[auto_auto_1fr]"
             >
               <div className="relative aspect-[2/3] w-full overflow-hidden bg-ink-800">
                 <Image

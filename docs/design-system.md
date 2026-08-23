@@ -70,10 +70,10 @@ cada componente.
 | `--text-caption` | 12–13 px, `0.08em` | Rótulos, meta |
 | `--text-body` | 16–17 px | Corpo |
 | `--text-lead` | 18–22 px | Parágrafo de abertura |
-| `--text-h3` | 24–34 px | Títulos de seção |
-| `--text-h2` | 32–60 px | Títulos |
-| `--text-h1` | 44–104 px | Título de página |
-| `--text-display` | 52–160 px | Manifesto, CTA final |
+| `--text-h3` | 22–28 px | Títulos de seção |
+| `--text-h2` | 28–48 px | Títulos |
+| `--text-h1` | 36–72 px | Título de página |
+| `--text-display` | 40–104 px | Manifesto, CTA final |
 
 ### Shrikhand — a assinatura
 

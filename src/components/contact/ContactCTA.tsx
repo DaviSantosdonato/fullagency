@@ -24,10 +24,10 @@ export const ContactCTA = () => (
       <Reveal kind="mask">
         <h2
           id="cta-titulo"
-          className="max-w-[14ch] text-display font-light leading-[0.88] tracking-[-0.05em]"
+          className="max-w-[22ch] text-h1 font-light leading-[0.95] tracking-[-0.04em]"
         >
           A sua empresa é profissional.
-          <span className="mt-2 block text-ink-950/45 md:mt-4">
+          <span className="mt-2 block text-ink-950/45 md:mt-3">
             A sua <HandwrittenAccent className="text-bolt-600">presença</HandwrittenAccent>{" "}
             também precisa ser.
           </span>
