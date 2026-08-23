@@ -184,10 +184,11 @@ export const CinematicScrollHero = () => {
         aria-label="Abertura - da ideia ao frame"
         className="relative"
         style={{
-          // Long enough that each beat gets real scroll distance, short enough
-          // that reaching the end never feels like a chore. Shorter on phones,
-          // where the same distance costs many more swipes.
-          height: scrubEnabled ? (narrow ? "420vh" : "520vh") : "auto",
+          // Give the playhead enough runway that one wheel gesture advances
+          // only a small part of the footage. Desktop spans roughly eight
+          // usable screens; phones stay shorter because each screen costs a
+          // full swipe, while still giving every chapter room to breathe.
+          height: scrubEnabled ? (narrow ? "700vh" : "900vh") : "auto",
         }}
       >
         <div
