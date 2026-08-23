@@ -56,7 +56,7 @@ export const ClientMarquee = () => (
         id="client-marquee-title"
         className="max-w-[16ch] text-h2 font-light leading-[0.98] tracking-[-0.035em] text-paper-50"
       >
-        Marcas atendidas pela FULL
+        Principais marcas atendidas pela FULL
       </h2>
       <Link
         href="/cases"
