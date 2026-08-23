@@ -130,9 +130,17 @@ describe("cases", () => {
       ...additionalClients,
     ]);
 
+    const names = marqueeClients.map((client) => client.name);
+
     expect(marqueeClients.length).toBeGreaterThanOrEqual(8);
-    expect(new Set(marqueeClients).size).toBe(marqueeClients.length);
-    for (const client of marqueeClients) expect(confirmedNames.has(client)).toBe(true);
+    expect(new Set(names).size).toBe(names.length);
+    for (const client of marqueeClients) {
+      expect(confirmedNames.has(client.name)).toBe(true);
+      expect(client.logo.src).toMatch(/^\/media\/clients\/.+\.(jpg|png|svg)$/);
+      expect(client.logo.width).toBeGreaterThan(0);
+      expect(client.logo.height).toBeGreaterThan(0);
+      expect(client.source).toMatch(/^https:\/\//);
+    }
   });
 
   it("points every Instagram link at a real profile URL", () => {

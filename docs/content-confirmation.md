@@ -127,6 +127,7 @@ e o escopo precisam de uma passada da equipe** — especialmente:
 | Asset | Origem | Ação |
 |---|---|---|
 | `public/media/hero/full-camera-*` | `202608231441.mp4` (15,16 s; master Full HD/60 fps) | Corte escolhido para o scroll e otimizado para desktop e mobile |
+| `public/media/clients/*` | Sites e perfis oficiais das nove marcas exibidas | Logos originais usadas na faixa da home; não redesenhar tipografia em CSS |
 | `public/media/brand/full-logo.png` | site oficial, 1673×473 | Pedir o vetor (SVG/AI) |
 | `public/media/brand/full-studio.jpg` | site oficial, 1920×1280 | Pedir o original em alta |
 | `public/media/team/*.jpg` | site oficial, 533×800 | Pedir os originais |

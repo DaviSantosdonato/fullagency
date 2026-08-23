@@ -175,22 +175,124 @@ export const additionalClients: readonly string[] = [
   "Levplay",
 ];
 
+export interface MarqueeClient {
+  readonly name: string;
+  readonly logo: {
+    readonly src: string;
+    readonly width: number;
+    readonly height: number;
+    readonly kind: "wordmark" | "mark";
+    readonly surface: "dark" | "light";
+  };
+  /** Official page from which the exact artwork was obtained. */
+  readonly source: string;
+}
+
 /**
- * The strongest names in the agency's confirmed client roster, ordered for a
- * balanced marquee rhythm. These are rendered as names rather than simulated
- * logos until the agency supplies each brand's official vector artwork.
+ * Official client artwork only. Wordmarks come from each company's website;
+ * the three local marks come from the confirmed public profiles already tied
+ * to the case records above. No typeface or logo is reconstructed in CSS.
  */
-export const marqueeClients: readonly string[] = [
-  "Rodobras",
-  "Show Safra",
-  "Simonetto Casa Siena",
-  "Atacado Beira Rio",
-  "Domina Fibra",
-  "House Fit",
-  "Colégio San Petrus",
-  "Fábrica dos Óculos",
-  "Mult Vale",
-  "Levplay",
+export const marqueeClients: readonly MarqueeClient[] = [
+  {
+    name: "Rodobras",
+    logo: {
+      src: "/media/clients/rodobras.png",
+      width: 346,
+      height: 50,
+      kind: "wordmark",
+      surface: "dark",
+    },
+    source: "https://gruporodobras.com.br/rede-rodobras",
+  },
+  {
+    name: "Show Safra",
+    logo: {
+      src: "/media/clients/show-safra.svg",
+      width: 543,
+      height: 178,
+      kind: "wordmark",
+      surface: "light",
+    },
+    source: "https://www.showsafra.com.br/",
+  },
+  {
+    name: "Simonetto Casa Siena",
+    logo: {
+      src: "/media/clients/simonetto.svg",
+      width: 2313,
+      height: 522,
+      kind: "wordmark",
+      surface: "light",
+    },
+    source: "https://www.simonetto.com.br/",
+  },
+  {
+    name: "Atacado Beira Rio",
+    logo: {
+      src: "/media/clients/beira-rio.png",
+      width: 300,
+      height: 100,
+      kind: "wordmark",
+      surface: "dark",
+    },
+    source: "https://lojasbeirario.com.br/sobre/",
+  },
+  {
+    name: "Domina Fibra",
+    logo: {
+      src: "/media/clients/domina-fibra.png",
+      width: 1250,
+      height: 250,
+      kind: "wordmark",
+      surface: "dark",
+    },
+    source: "https://dominafibra.com.br/",
+  },
+  {
+    name: "Mult Vale",
+    logo: {
+      src: "/media/clients/mult-vale.png",
+      width: 395,
+      height: 170,
+      kind: "wordmark",
+      surface: "light",
+    },
+    source: "https://www.multvale.com/",
+  },
+  {
+    name: "House Fit",
+    logo: {
+      src: "/media/clients/house-fit.jpg",
+      width: 100,
+      height: 100,
+      kind: "mark",
+      surface: "dark",
+    },
+    source: "https://www.instagram.com/housefitsinop/",
+  },
+  {
+    name: "Fábrica dos Óculos",
+    logo: {
+      src: "/media/clients/fabrica-dos-oculos.jpg",
+      width: 100,
+      height: 100,
+      kind: "mark",
+      surface: "dark",
+    },
+    source: "https://www.instagram.com/fabricadosoculos.oficial/",
+  },
+  {
+    name: "Escola Allegra",
+    logo: {
+      src: "/media/clients/escola-allegra.jpg",
+      width: 100,
+      height: 100,
+      kind: "mark",
+      surface: "dark",
+    },
+    source: "https://www.instagram.com/escolaallegra/",
+  },
 ];
 
 export const featuredCases = cases.slice(0, 4);
