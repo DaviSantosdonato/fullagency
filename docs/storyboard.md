@@ -6,8 +6,8 @@ deixando o resto da página assumir.
 
 ## O material
 
-`202608230103.mp4` — master de **15,10 s**, 3840×2160, 60 fps. As variantes do
-site são normalizadas para **15,08 s**, 24 fps e 362 frames.
+`202608231441.mp4` — master de **15,16 s**, 1920×1080, 60 fps. As variantes do
+site são normalizadas para **15,17 s**, 24 fps e 364 frames.
 
 O corte já contém quase exatamente a progressão pedida:
 
@@ -18,7 +18,7 @@ O corte já contém quase exatamente a progressão pedida:
 | 157 | 6,5 s | Corpo inteiro da câmera gira em 3/4 |
 | 278 | 11,6 s | Câmera retorna para o eixo frontal |
 | 326 | 13,6 s | Câmera começa a recuar rapidamente |
-| 361 | 15,0 s | Equipamento desaparece e o quadro esvazia |
+| 363 | 15,1 s | Equipamento desaparece e o quadro esvazia |
 
 O corte já começa com um ponto de luz dentro da lente. A composição em CSS
 reforça esse início com um plano preto perfurado por uma abertura radial

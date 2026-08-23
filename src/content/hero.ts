@@ -6,7 +6,7 @@ import type { HeroChapter } from "./types";
  * Positions are **normalised** (0–1), not seconds. The storyboard was written
  * against a 30s cut (0–5 / 5–13 / 13–23 / 23–27 / 27–30) and those ratios are
  * what survive here, so the same chapters land correctly whatever the real
- * `video.duration` turns out to be — the current cut is 15.10s.
+ * `video.duration` turns out to be — the current cut is 15.17s.
  *
  * @see docs/storyboard.md
  */
