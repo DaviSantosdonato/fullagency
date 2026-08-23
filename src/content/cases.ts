@@ -175,6 +175,24 @@ export const additionalClients: readonly string[] = [
   "Levplay",
 ];
 
+/**
+ * The strongest names in the agency's confirmed client roster, ordered for a
+ * balanced marquee rhythm. These are rendered as names rather than simulated
+ * logos until the agency supplies each brand's official vector artwork.
+ */
+export const marqueeClients: readonly string[] = [
+  "Rodobras",
+  "Show Safra",
+  "Simonetto Casa Siena",
+  "Atacado Beira Rio",
+  "Domina Fibra",
+  "House Fit",
+  "Colégio San Petrus",
+  "Fábrica dos Óculos",
+  "Mult Vale",
+  "Levplay",
+];
+
 export const featuredCases = cases.slice(0, 4);
 
 export const getCase = (slug: string): CaseStudy | undefined =>

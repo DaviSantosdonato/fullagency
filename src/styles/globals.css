@@ -235,6 +235,40 @@
   border-block-start: 1px solid color-mix(in oklab, var(--color-paper-100) 12%, transparent);
 }
 
+/* Client credits — one uninterrupted reel, built from two identical runs. */
+@keyframes client-marquee-forward {
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.client-marquee-window {
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 6%,
+    black 94%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 6%,
+    black 94%,
+    transparent
+  );
+}
+
+.client-marquee-track {
+  animation: client-marquee-forward 34s linear infinite;
+  will-change: transform;
+}
+
+.client-marquee-window:hover .client-marquee-track,
+.client-marquee-window:focus-within .client-marquee-track {
+  animation-play-state: paused;
+}
+
 /* ==========================================================================
    Reveal primitives — driven by GSAP, but styled here so that a no-JS or
    reduced-motion visit renders the *finished* state, never a blank page.
@@ -271,5 +305,21 @@ html:not(.js-ready) [data-reveal] {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  }
+
+  .client-marquee-window {
+    overflow-x: auto;
+    -webkit-mask-image: none;
+    mask-image: none;
+    scrollbar-width: thin;
+  }
+
+  .client-marquee-track {
+    animation: none !important;
+    transform: none !important;
+  }
+
+  .client-marquee-copy {
+    display: none;
   }
 }

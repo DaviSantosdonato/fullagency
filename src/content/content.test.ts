@@ -1,5 +1,11 @@
 import { describe, expect, it } from "vitest";
-import { additionalClients, cases, featuredCases, getCase } from "./cases";
+import {
+  additionalClients,
+  cases,
+  featuredCases,
+  getCase,
+  marqueeClients,
+} from "./cases";
 import { getService, services } from "./services";
 import { heroChapters } from "./hero";
 import { processSteps, team } from "./team";
@@ -116,6 +122,17 @@ describe("cases", () => {
       expect(client.trim().length).toBeGreaterThan(0);
       expect(client).not.toContain(CONFIRMAR);
     }
+  });
+
+  it("builds the marquee only from confirmed client names", () => {
+    const confirmedNames = new Set([
+      ...cases.map((entry) => entry.client),
+      ...additionalClients,
+    ]);
+
+    expect(marqueeClients.length).toBeGreaterThanOrEqual(8);
+    expect(new Set(marqueeClients).size).toBe(marqueeClients.length);
+    for (const client of marqueeClients) expect(confirmedNames.has(client)).toBe(true);
   });
 
   it("points every Instagram link at a real profile URL", () => {
