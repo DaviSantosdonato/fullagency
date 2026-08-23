@@ -218,6 +218,17 @@ export const marqueeClients: readonly MarqueeClient[] = [
     source: "https://www.showsafra.com.br/",
   },
   {
+    name: "Colégio San Petrus",
+    logo: {
+      src: "/media/clients/san-petrus.png",
+      width: 262,
+      height: 175,
+      kind: "wordmark",
+      surface: "dark",
+    },
+    source: "https://www.cspsinop.com.br/",
+  },
+  {
     name: "Simonetto Casa Siena",
     logo: {
       src: "/media/clients/simonetto.svg",
@@ -263,6 +274,17 @@ export const marqueeClients: readonly MarqueeClient[] = [
     source: "https://www.multvale.com/",
   },
   {
+    name: "Levplay",
+    logo: {
+      src: "/media/clients/levplay-sports.jpg",
+      width: 100,
+      height: 100,
+      kind: "mark",
+      surface: "dark",
+    },
+    source: "https://www.instagram.com/levplaysports/",
+  },
+  {
     name: "House Fit",
     logo: {
       src: "/media/clients/house-fit.jpg",
@@ -294,6 +316,28 @@ export const marqueeClients: readonly MarqueeClient[] = [
       surface: "dark",
     },
     source: "https://www.instagram.com/escolaallegra/",
+  },
+  {
+    name: "Cemais",
+    logo: {
+      src: "/media/clients/cemais.jpg",
+      width: 100,
+      height: 100,
+      kind: "mark",
+      surface: "dark",
+    },
+    source: "https://www.instagram.com/cemais_/",
+  },
+  {
+    name: "Bralesi Burger",
+    logo: {
+      src: "/media/clients/bralesi-burger.jpg",
+      width: 100,
+      height: 100,
+      kind: "mark",
+      surface: "dark",
+    },
+    source: "https://www.instagram.com/bralesiburger/",
   },
 ];
 

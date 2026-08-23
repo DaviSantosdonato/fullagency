@@ -124,7 +124,7 @@ describe("cases", () => {
     }
   });
 
-  it("builds the marquee only from confirmed client names", () => {
+  it("builds the marquee with every confirmed client exactly once", () => {
     const confirmedNames = new Set([
       ...cases.map((entry) => entry.client),
       ...additionalClients,
@@ -132,7 +132,7 @@ describe("cases", () => {
 
     const names = marqueeClients.map((client) => client.name);
 
-    expect(marqueeClients.length).toBeGreaterThanOrEqual(8);
+    expect([...names].sort()).toEqual([...confirmedNames].sort());
     expect(new Set(names).size).toBe(names.length);
     for (const client of marqueeClients) {
       expect(confirmedNames.has(client.name)).toBe(true);

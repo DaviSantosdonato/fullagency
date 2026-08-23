@@ -260,7 +260,7 @@
 }
 
 .client-marquee-track {
-  animation: client-marquee-forward 34s linear infinite;
+  animation: client-marquee-forward 49s linear infinite;
   will-change: transform;
 }
 
